@@ -1,1 +1,1 @@
-# hangman
+# Hangman Project with HTML, CSS and JS
