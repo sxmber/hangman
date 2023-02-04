@@ -4,13 +4,83 @@ html {
     padding: 0;
     width: 100vw;
     height: 100vh;
+    background-color: black;
 }
+
 
 #post {
     margin: 0 auto;
     /* 380px */
-    height: 20%;
+    height: 100%;
     width: 15%;
     font-size: 500%;
-    white-space: pre-line;
+    color: white;
+
+}
+
+#container {
+    height: 30%;
+}
+
+#word {
+    color: white;
+    text-align: center;
+    margin: 50px 0;
+    font-size: xx-large;
+}
+
+#keyboard {
+    margin: 0 auto;
+    width: 300px;
+    height: -10%;
+    display: flex;
+    gap: 11px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+
+
+}
+
+.key {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin: 5px;
+    border: 2px solid white;
+    border-radius: 5px;
+
+
+}
+
+.key:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    box-shadow: 3px 3px 2px gray;
+}
+
+.usedLetters {
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}
+
+@media screen and (max-height: 748px) {
+    .key {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        color: white;
+        text-align: center;
+        margin: 5px;
+        border: 2px solid white;
+        border-radius: 5px;
+    }
 }
