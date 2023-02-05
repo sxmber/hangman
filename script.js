@@ -51,13 +51,35 @@ wordList = [
 const post = document.getElementById('post')
 const word = document.getElementById('word');
 const keys = document.querySelectorAll(".key");
+const result = document.getElementById("result");
+const reset = document.getElementById("reset");
 let winCount = 0;
 let loseCount = 0;
 let randomWord = [];
+
+reset.onclick = () => resetgame();
+//resets game
+function resetgame() {
+    enable();
+    winCount = 0;
+    loseCount = 0;
+    post.textContent = framelist[0];
+    keys.forEach((key) => key.setAttribute('class', "key"));
+    result.innerHTML = "";
+    reset.style.display = "none";
+    generateWord();
+}
 //disables user from clicking keys
 function disable() {
     keys.forEach((key) => {
-        key.disabled = "true";
+        key.disabled = true;
+
+    })
+}
+//enable buttons
+function enable() {
+    keys.forEach((key) => {
+        key.disabled = false;
 
     })
 }
@@ -90,7 +112,8 @@ keys.forEach((key) => {
                 }
                 //Display you won and give option to restart
                 if (winCount === randomWord.length) {
-                    console.log("you win");
+                    result.innerHTML = "You win!";
+                    reset.style.display = "block";
                     disable();
                 }
 
@@ -99,14 +122,14 @@ keys.forEach((key) => {
             loseCount += 1;
             post.textContent = framelist[loseCount];
             if (loseCount == 6) {
-                console.log("You lose");
+                result.innerHTML = "You lost :(";
+                reset.style.display = "block"
                 disable();
             }
 
         }
     })
 })
-
 
 
 
