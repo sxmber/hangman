@@ -108,6 +108,13 @@ html {
     transform: translateX(-3px) translateY(-3px);
 }
 
+#footer {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 95%;
+}
+
 @media screen and (max-height: 748px) {
     .key {
         height: 40px;
