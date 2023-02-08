@@ -116,6 +116,10 @@ html {
 }
 
 @media screen and (max-height: 748px) {
+    * {
+        font-size: .95em;
+    }
+
     .key {
         height: 40px;
         width: 40px;
@@ -126,4 +130,6 @@ html {
         border: 2px solid white;
         border-radius: 5px;
     }
+
+
 }
