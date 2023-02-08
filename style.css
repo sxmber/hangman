@@ -109,10 +109,10 @@ html {
 }
 
 #footer {
-    position: absolute;
+    position: fixed;
     width: 30px;
     height: 30px;
-    top: 95%;
+    bottom: 0%;
 }
 
 @media screen and (max-height: 748px) {

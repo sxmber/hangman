@@ -93,7 +93,6 @@ function generateWord() {
 
 }
 generateWord();
-console.log(randomWord);
 keys.forEach((key) => {
     key.addEventListener('click', function (e) {
         //apply the pressed class
